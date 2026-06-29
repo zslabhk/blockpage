@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Access Blocked</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --danger: #c62828;
+      --danger-soft: #fde8e8;
+      --border: #e5e7eb;
+      --primary: #0f62fe;
+      --primary-hover: #0353e9;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--danger-soft);
+      color: var(--danger);
+      font-weight: 700;
+      font-size: 13px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0 0 16px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .info-box {
+      background: #f9fafb;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 24px 0;
+    }
+
+    .info-box strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 10px;
+      padding: 12px 18px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .logo {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    @media (max-width: 600px) {
+      .card {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">ACME limited</div>
+
+      <div class="badge">Security Access Blocked</div>
+
+      <h1>This website has been blocked</h1>
+
+      <p>
+        Your request was denied because the destination has been identified as a
+        potential security risk under corporate internet access policy.
+      </p>
+
+      <div class="info-box">
+        <strong>Why am I seeing this?</strong>
+        This site may be associated with malware, phishing, suspicious activity,
+        or another security-related threat category.
+      </div>
+
+      <p>
+        If you believe this website is required for legitimate business use,
+        please contact the IT Security team or submit an access review request.
+      </p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:security@yourcompany.com?subject=Access Review Request">
+          Request Review
+        </a>
+        <a class="btn btn-secondary" href="https://support.yourcompany.com" target="_blank">
+          Contact IT Support
+        </a>
+      </div>
+
+      <div class="footer">
+        Reference: URL Security Policy Block Page
+      </div>
+    </div>
+  </div>
+</body>
+</html>
